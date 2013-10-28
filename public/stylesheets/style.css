@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+#gd-action {
+  margin-right: 5px;
+}
+
+#result {
+  display: none;
+}

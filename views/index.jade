@@ -8,9 +8,9 @@ block content
           type:"post",
           url:"/garagedoor",
           success:function(result){
-            $("#result").html(result);
+            $("#result").show();
             setTimeout(function(){
-              $("#result").html("");
+              $("#result").hide();
             }, 2000);
           }
         });
@@ -20,6 +20,6 @@ block content
   h1= title
   p Welcome to #{title}
 
-  button.btn.btn-primary#gd-action(type='button') Garage Door 
-  
-  p#result
+  h5
+    button.btn.btn-primary#gd-action(type='button') Garage Door 
+    span#result.label.label-success Success 
