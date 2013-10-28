@@ -4,11 +4,22 @@ block content
   script
     $(document).ready(function(){
       $("#gd-action").click(function() {
-        console.log("open");
+        $.ajax({
+          type:"post",
+          url:"/garagedoor",
+          success:function(result){
+            $("#result").html(result);
+            setTimeout(function(){
+              $("#result").html("");
+            }, 2000);
+          }
+        });
       });
     });
 
   h1= title
   p Welcome to #{title}
 
-  button.btn.btn-primary#gd-action(type='button') Garage Door
+  button.btn.btn-primary#gd-action(type='button') Garage Door 
+  
+  p#result
